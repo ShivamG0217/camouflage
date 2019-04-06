@@ -1,0 +1,1 @@
+web: gunicorn imgcrypt.wsgi

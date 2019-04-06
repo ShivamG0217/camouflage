@@ -1,0 +1,48 @@
+<head>
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+{% block content %}
+<body>
+	<div class="navbar-fixed">
+	<nav>
+	    <div class="nav-wrapper">
+	      <a href="/" class="brand-logo center">Terminal</a>
+	      <ul id="nav-mobile" class="left hide-on-med-and-down">
+	        <li><a href="/">Home</a></li>
+	        <li><a href="/decrypt">Reveal Message</a></li>
+	      </ul>
+	    </div>
+	</nav>
+	</div>
+	<br><br>
+	<div class="container " >
+  			<div class="brown lighten-5">
+  				<h6>
+  			<blockquote>
+  				
+  				Enter the <b>Message</b> in lower case and without any symbols or numbers i.e only {a-z}.<br> Enter the <b>key</b> in lower case and without any symbols or numbers i.e only {a-z} and also without <b>spaces</b>.<br>
+		        	The Image Should be <b>RGB</b> and in <b>.PNG</b> or <b>.BMP</b> format.</h6>	
+		        </blockquote>
+		   </h6>     </div>
+		<br>
+		<div class="row">
+			<form method="post" enctype="multipart/form-data" class="col s12">
+				{% csrf_token %}
+				{{ form.as_p }}
+				<div class="center-align">
+				<button type="submit" class="btn"> Submit </button>
+				</div>
+		    </form>
+  		</div>
+  	</div>
+  		
+	
+</body>
+{% endblock %}

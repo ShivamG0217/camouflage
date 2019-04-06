@@ -1,0 +1,37 @@
+<head>
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+{% block content %}
+<body>
+	<div class="navbar-fixed">
+	<nav>
+	    <div class="nav-wrapper">
+	      <a href="/" class="brand-logo center">Terminal</a>
+	      <ul id="nav-mobile" class="left hide-on-med-and-down">
+	        <li><a href="/">Home</a></li>
+	        <li><a href="/encrypt">Hide Message</a></li>
+	      </ul>
+	    </div>
+	</nav>
+	</div>
+	<div class="container" class="center-align">
+		<br><br><br>
+		<div class="row">
+			<form method="post" enctype="multipart/form-data" class="col s12">
+				{% csrf_token %}
+				{{ form.as_p }}
+
+				<button type="submit" class="btn"> Submit </button>
+		    </form>
+  		</div>
+	</div>
+	
+</body>
+{% endblock %}

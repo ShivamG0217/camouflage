@@ -1,0 +1,34 @@
+{% block content %}
+<head>
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+
+<body>
+	<div class="navbar-fixed">
+	<nav>
+	    <div class="nav-wrapper">
+	      <a href="/" class="brand-logo center">Terminal</a>
+	      <ul id="nav-mobile" class="left hide-on-med-and-down">
+	        <li><a href="/">Home</a></li>
+	        <li><a href="/decrypt">Reveal Message</a></li>
+	      </ul>
+	    </div>
+	</nav>
+	</div>
+	<div class="container" align="center">
+		<br>
+		<p class="flow-text">This is your Image containing your hidden message</p>
+		<img class="responsive-img" src="http://localhost:8000/{{ url }}">
+		
+		<p class="flow-text">Right Click on the image to save the image</p>
+		<p class="flow-text">Do Not Edit or Compress the Image otherwise Message will be lost...</p>
+	</div>
+</body>
+{% endblock %}
